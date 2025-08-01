@@ -1,5 +1,6 @@
 # Backend
 backend/node_modules
 backend/.env
+backend/src/config/db.ts
 
 # Frontend
