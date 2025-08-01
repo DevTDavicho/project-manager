@@ -162,6 +162,7 @@ router.get('/profile', authenticateJWT, async (req: AuthRequest, res: Response) 
 });
 
 // Endpoint para actualizar el perfil del usuario (PUT /auth/profile)
+/*
 router.put('/profile', authenticateJWT, upload.single('avatar'), async (req: AuthRequest, res: Response) => {
     try {
         const userId = req.user?.userId;
@@ -234,7 +235,7 @@ router.put('/profile', authenticateJWT, upload.single('avatar'), async (req: Aut
         }
         res.status(500).json({ message: 'Error al actualizar el perfil.', error: error.message });
     }
-});
+});*/
 
 // Endpoint para cambiar contraseña (PUT /auth/change-password)
 router.put('/change-password', authenticateJWT, async (req: AuthRequest, res: Response) => {
@@ -309,6 +310,7 @@ router.put('/notification-settings', authenticateJWT, async (req: AuthRequest, r
 });
 
 // Endpoint para eliminar la cuenta del usuario (DELETE /auth/account)
+/*
 router.delete('/account', authenticateJWT, async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.userId;
@@ -341,6 +343,6 @@ router.delete('/account', authenticateJWT, async (req: AuthRequest, res: Respons
     console.error('Error al eliminar la cuenta:', error);
     res.status(500).json({ message: 'Error interno del servidor.' });
   }
-});
+});*/
 
 export default router;

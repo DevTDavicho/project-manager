@@ -1,6 +1,6 @@
 // src/models/Task,ts
 
-
+// Importa herramientas de mongoose para definir esquemas y modelos
 import { Schema, model, Document, Types } from 'mongoose';
 
 // Interfaz que representa la estructura de una tarea en la base de datos

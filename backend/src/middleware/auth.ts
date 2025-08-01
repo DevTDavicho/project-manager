@@ -1,5 +1,8 @@
 // src/middleware/auth.ts
 
+// -------------------------------
+// Middleware: Verifica JWT en las peticiones protegidas
+// -------------------------------
 // Importa tipos necesarios desde Express
 import { Request, Response, NextFunction } from 'express';
 // Importa la biblioteca jsonwebtoken para verificar tokens JWT

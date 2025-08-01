@@ -1,4 +1,4 @@
-// src/repositories/project.repository.ts (VERSIÓN FINAL, COMPLETA Y CON TODOS LOS CAMPOS)
+// src/repositories/project.repository.ts
 
 import {
     TransactWriteCommand, // Comando para operaciones transaccionales en DynamoDB

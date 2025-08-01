@@ -1,6 +1,5 @@
 // src/models/project.interface.ts
 
-
 export interface Project {
     projectId: string;      // ID único del proyecto
     name: string;           // Nombre del proyecto

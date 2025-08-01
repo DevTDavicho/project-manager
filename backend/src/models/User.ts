@@ -1,4 +1,4 @@
-// src/models/user.ts
+// src/models/User.ts
 
 // Importa las interfaces necesarias
 import { User, NotificationSettings } from '../models/user.interface';

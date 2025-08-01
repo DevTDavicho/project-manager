@@ -1,3 +1,5 @@
+// src/controllers/userController.ts
+
 import { Request, Response } from 'express';
 
 let users: any[] = [];
