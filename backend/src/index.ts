@@ -27,6 +27,18 @@ app.use('/api/auth', authRoutes);
 import userRoutes from './routes/users';
 app.use('/api/users', userRoutes);
 
+import taskRoutes from './routes/tasks';
+app.use('/api/tasks', taskRoutes);
+
+import projectRoutes from './routes/projects';
+app.use('/api/projects', projectRoutes);
+
+import notificationRoutes from './routes/notifications';
+app.use('/api/notifications', notificationRoutes);
+
+import dashboardRoutes from './routes/dashboard';
+app.use('/api/dashboard', dashboardRoutes);
+
 // Conexion a mongodb (temproal para prueba)
 /*import connectDB from './config/db';
 connectDB(); // Asegúrate de llamar a la función*/
