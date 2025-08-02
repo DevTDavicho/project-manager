@@ -16,7 +16,7 @@ import { randomUUID } from 'crypto';
 
 const USERS_TABLE = 'Users';
 const EMAIL_INDEX = 'EmailIndex';
-const USERNAME_INDEX = 'Username_Index'; // Asegúrate de que este sea el nombre correcto de tu GSI para username
+const USERNAME_INDEX = 'UsernameIndex'; // Asegúrate de que este sea el nombre correcto de tu GSI para username
 
 /**
  * Guarda un nuevo usuario en la base de datos.
