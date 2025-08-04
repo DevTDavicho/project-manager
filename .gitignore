@@ -1,7 +1,11 @@
 # Backend
+backend/dist
 backend/node_modules
 backend/.env
 backend/src/config/db.ts
+backend/taskflowbackend
+backend/*.zip
+backend/.ebextensions
 
 # Frontend
 frontend/.angular
