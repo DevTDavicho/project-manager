@@ -9,7 +9,8 @@ import { Router } from '@angular/router'; // Importa Router para posible redirec
 @Component({
   selector: 'app-notifications',
   standalone: true,
-  imports: [CommonModule, RouterModule, DatePipe],
+  imports: [CommonModule, RouterModule],
+  providers: [DatePipe],
   template: `
     <div class="notifications-container">
       <h1>Notificaciones</h1>

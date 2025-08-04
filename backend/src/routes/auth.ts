@@ -6,8 +6,8 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { User, JwtPayload, NotificationSettings, RegisterBody, LoginBody } from '../models/user.interface';
 import { authenticateJWT, AuthRequest } from '../middleware/auth';
-// import { S3Client, DeleteObjectCommand } from "@aws-sdk/client-s3";
-// import { upload, s3Client, S3_BUCKET_NAME } from '../config/s3';
+import { S3Client, DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { upload, s3Client, S3_BUCKET_NAME } from '../config/s3';
 import * as NotificationRepository from '../repositories/notification.repository';
 import { NotificationType } from '../models/notification.interface';
 import { v4 as uuidv4 } from 'uuid';
@@ -162,7 +162,6 @@ router.get('/profile', authenticateJWT, async (req: AuthRequest, res: Response) 
 });
 
 // Endpoint para actualizar el perfil del usuario (PUT /auth/profile)
-/*
 router.put('/profile', authenticateJWT, upload.single('avatar'), async (req: AuthRequest, res: Response) => {
     try {
         const userId = req.user?.userId;
@@ -235,7 +234,7 @@ router.put('/profile', authenticateJWT, upload.single('avatar'), async (req: Aut
         }
         res.status(500).json({ message: 'Error al actualizar el perfil.', error: error.message });
     }
-});*/
+});
 
 // Endpoint para cambiar contraseña (PUT /auth/change-password)
 router.put('/change-password', authenticateJWT, async (req: AuthRequest, res: Response) => {
@@ -310,7 +309,6 @@ router.put('/notification-settings', authenticateJWT, async (req: AuthRequest, r
 });
 
 // Endpoint para eliminar la cuenta del usuario (DELETE /auth/account)
-/*
 router.delete('/account', authenticateJWT, async (req: AuthRequest, res: Response) => {
   try {
     const userId = req.user?.userId;
@@ -343,6 +341,6 @@ router.delete('/account', authenticateJWT, async (req: AuthRequest, res: Respons
     console.error('Error al eliminar la cuenta:', error);
     res.status(500).json({ message: 'Error interno del servidor.' });
   }
-});*/
+});
 
 export default router;
